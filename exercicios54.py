@@ -1,0 +1,14 @@
+#Crie um programa que leia o ano de nascimento de sete pessoas.No final,mostre quantas pessoas ainda não atingiram a moioridade e quantas jão são maiores.
+from datetime import date
+atual = date.today().year
+totmaior = 0
+totmenor = 0
+for pess in range(1, 8):
+    nasc = int(input('Em que ano a {} pessoa Nasceu? '.format(pess)))
+    idade = atual - nasc
+    if idade >= 18:
+        totmaior += 1
+    else:
+        totmenor += 1
+print('Ao todo tivemos {} pessoas maiores de idade'.format(totmaior))
+print('E também tivemos {} pessoas menores de idade'.format(totmenor))
